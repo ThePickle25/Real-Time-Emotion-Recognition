@@ -1,4 +1,4 @@
-# Recognition Induces Emotional of Audience In Cinema.
+# Real-Time Emotion Recogntion.
 The purpose of this project is to recognize the emotions of the audience real-time in the cinema to evaluate their feelings in relation to each movie scene.
 * We presents a brand-new problem to the movie business that has never been studied in
 public before. Which is Recognition Induces Emotional of Audiences In Cinema.
@@ -9,13 +9,16 @@ public before. Which is Recognition Induces Emotional of Audiences In Cinema.
 
 
 ## Architecture
-* An end-to-end deep learning framework, based on attentional convolutional network
-* Attention mechanism is added through spatial transformer network
+* Brand new CNN
+  * An end-to-end deep learning framework, based on attentional convolutional network
+  * Attention mechanism is added through spatial transformer network
 
 
 <p align="center">
   <img src="imgs/net_arch.png" width="960" title="Deep-Emotion Architecture">
 </p>
+* Pretrained model ViI from HuggingFace
+  * A pretrained model is published in HuggingFace that we used to finetune with our dataset.
 
 
 ## Datasets
@@ -43,14 +46,17 @@ public before. Which is Recognition Induces Emotional of Audiences In Cinema.
 ## Structure of this repository
 This repository is organized as :
 * [main](/main.py) This file contains setup of the dataset and training loop.
-* [visualize](/visualize.py) This file contains the source code for evaluating the model on test data and real-time testing on webcam.
-* [deep_emotion](/deep_emotion.py) This file contains the model class
+* [visualize for basic cnn model](/visualize.py) This file contains the source code for evaluating the model on test data and real-time testing on webcam.
+* [visualize for ViT model](/visualize_vit.py) This file contains the source code for evaluating the ViT model on real-time webcam
+* [deep_emotion](/deep_emotion.py) This file contains the cnn model class
+* [ViT_deep_emotion](/ViT_deep_emotion.py). This file contains the ViT model class and train session
 * [data_loaders](/data_loaders.py) This file contains the dataset class
 * [generate_data](/generate_data.py) This file contains the setup of the [dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 * [Yolov5](/Yolov5) This folder contains the setup of yolov5 models.
 * [models](/models) This folder contains the model of yolov5.
 * [Webcam](/Webcam) This folder contains real-time images from the webcam.
 * [detect_face.py](/detect_face.py) This file contains the face detecting method using yolov5 model.
+* 
 
 
 
